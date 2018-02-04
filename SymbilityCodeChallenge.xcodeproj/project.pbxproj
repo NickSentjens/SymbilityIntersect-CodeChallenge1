@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		012D7B692024E8F000C54E65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D7B682024E8F000C54E65 /* AppDelegate.swift */; };
-		012D7B6B2024E8F000C54E65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D7B6A2024E8F000C54E65 /* ViewController.swift */; };
+		012D7B6B2024E8F000C54E65 /* CryptoChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D7B6A2024E8F000C54E65 /* CryptoChartsViewController.swift */; };
 		012D7B6E2024E8F000C54E65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D7B6C2024E8F000C54E65 /* Main.storyboard */; };
 		012D7B702024E8F000C54E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D7B6F2024E8F000C54E65 /* Assets.xcassets */; };
 		012D7B732024E8F000C54E65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D7B712024E8F000C54E65 /* LaunchScreen.storyboard */; };
 		012D7B7E2024E8F100C54E65 /* SymbilityCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D7B7D2024E8F100C54E65 /* SymbilityCodeChallengeTests.swift */; };
+		016833AE2024F5E9003C7C64 /* CryptoChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016833AD2024F5E9003C7C64 /* CryptoChartTableViewCell.swift */; };
+		01EFD1952024FCFF0054E20A /* Cryptrocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EFD1942024FCFF0054E20A /* Cryptrocurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		012D7B652024E8F000C54E65 /* SymbilityCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymbilityCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D7B682024E8F000C54E65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		012D7B6A2024E8F000C54E65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		012D7B6A2024E8F000C54E65 /* CryptoChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoChartsViewController.swift; sourceTree = "<group>"; };
 		012D7B6D2024E8F000C54E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		012D7B6F2024E8F000C54E65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012D7B722024E8F000C54E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		012D7B792024E8F100C54E65 /* SymbilityCodeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymbilityCodeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D7B7D2024E8F100C54E65 /* SymbilityCodeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbilityCodeChallengeTests.swift; sourceTree = "<group>"; };
 		012D7B7F2024E8F100C54E65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016833AD2024F5E9003C7C64 /* CryptoChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoChartTableViewCell.swift; sourceTree = "<group>"; };
+		01EFD1942024FCFF0054E20A /* Cryptrocurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptrocurrency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				012D7B682024E8F000C54E65 /* AppDelegate.swift */,
-				012D7B6A2024E8F000C54E65 /* ViewController.swift */,
+				012D7B6A2024E8F000C54E65 /* CryptoChartsViewController.swift */,
 				012D7B6C2024E8F000C54E65 /* Main.storyboard */,
 				012D7B6F2024E8F000C54E65 /* Assets.xcassets */,
 				012D7B712024E8F000C54E65 /* LaunchScreen.storyboard */,
 				012D7B742024E8F000C54E65 /* Info.plist */,
+				016833AD2024F5E9003C7C64 /* CryptoChartTableViewCell.swift */,
+				01EFD1942024FCFF0054E20A /* Cryptrocurrency.swift */,
 			);
 			path = SymbilityCodeChallenge;
 			sourceTree = "<group>";
@@ -199,7 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012D7B6B2024E8F000C54E65 /* ViewController.swift in Sources */,
+				012D7B6B2024E8F000C54E65 /* CryptoChartsViewController.swift in Sources */,
+				016833AE2024F5E9003C7C64 /* CryptoChartTableViewCell.swift in Sources */,
+				01EFD1952024FCFF0054E20A /* Cryptrocurrency.swift in Sources */,
 				012D7B692024E8F000C54E65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +353,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicksentjens.SymbilityCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -357,7 +365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicksentjens.SymbilityCodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -408,6 +416,7 @@
 				012D7B842024E8F100C54E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		012D7B852024E8F100C54E65 /* Build configuration list for PBXNativeTarget "SymbilityCodeChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +425,7 @@
 				012D7B872024E8F100C54E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

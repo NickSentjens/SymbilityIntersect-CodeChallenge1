@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Crypto Charts View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CryptoChartsViewController" customModule="SymbilityCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Me-BH-wvC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto Charts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKd-4n-rTg">
+                                        <rect key="frame" x="125.5" y="14.5" width="123" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BS9-F3-ozp"/>
+                                    <constraint firstItem="YKd-4n-rTg" firstAttribute="centerX" secondItem="0Me-BH-wvC" secondAttribute="centerX" id="gxg-Ii-GmZ"/>
+                                    <constraint firstItem="YKd-4n-rTg" firstAttribute="centerY" secondItem="0Me-BH-wvC" secondAttribute="centerY" id="xit-GF-vEF"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-so-ncd">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cryptoCell" rowHeight="70" id="dFl-Fp-WDt" customClass="CryptoChartTableViewCell" customModule="SymbilityCodeChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dFl-Fp-WDt" id="iJY-u5-6BG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currrency Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-P9-1bA">
+                                                    <rect key="frame" x="10" y="10" width="285" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n58-iA-AOZ">
+                                                    <rect key="frame" x="10" y="41" width="150" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hon-uk-Hfi">
+                                                    <rect key="frame" x="325" y="23" width="30" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Dmv-9D-a01"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="starIcon"/>
+                                                    <connections>
+                                                        <action selector="buttonTappedWithSender:" destination="dFl-Fp-WDt" eventType="touchUpInside" id="BHu-qi-FlT"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="k7V-P9-1bA" secondAttribute="trailing" constant="80" id="3nv-dg-dFl"/>
+                                                <constraint firstItem="k7V-P9-1bA" firstAttribute="top" secondItem="iJY-u5-6BG" secondAttribute="top" constant="10" id="H3h-x1-r59"/>
+                                                <constraint firstItem="n58-iA-AOZ" firstAttribute="top" secondItem="k7V-P9-1bA" secondAttribute="bottom" constant="10" id="Hd0-Hh-KTB"/>
+                                                <constraint firstItem="k7V-P9-1bA" firstAttribute="leading" secondItem="iJY-u5-6BG" secondAttribute="leading" constant="10" id="Tef-5N-Hd4"/>
+                                                <constraint firstAttribute="trailing" secondItem="hon-uk-Hfi" secondAttribute="trailing" constant="20" id="U1I-1b-L2g"/>
+                                                <constraint firstItem="hon-uk-Hfi" firstAttribute="centerY" secondItem="iJY-u5-6BG" secondAttribute="centerY" id="ifx-dg-5Ui"/>
+                                                <constraint firstItem="n58-iA-AOZ" firstAttribute="leading" secondItem="iJY-u5-6BG" secondAttribute="leading" constant="10" id="mEg-sh-PSr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cryptoPriceLabel" destination="n58-iA-AOZ" id="fPL-xa-vhL"/>
+                                            <outlet property="cryptoStarIcon" destination="hon-uk-Hfi" id="mcM-rr-xz9"/>
+                                            <outlet property="cryptoTitleLabel" destination="k7V-P9-1bA" id="i7a-sS-QYC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gTs-so-ncd" secondAttribute="trailing" id="1dt-WJ-KSF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gTs-so-ncd" secondAttribute="bottom" id="41f-14-mp7"/>
+                            <constraint firstItem="gTs-so-ncd" firstAttribute="top" secondItem="0Me-BH-wvC" secondAttribute="bottom" id="QKe-CF-oXn"/>
+                            <constraint firstItem="gTs-so-ncd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YFF-PK-5SM"/>
+                            <constraint firstItem="0Me-BH-wvC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZGg-bZ-YD3"/>
+                            <constraint firstAttribute="trailing" secondItem="0Me-BH-wvC" secondAttribute="trailing" id="bPP-Xc-hr8"/>
+                            <constraint firstItem="0Me-BH-wvC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i9M-A4-t1Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="gTs-so-ncd" id="xwo-fu-dVN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="starIcon" width="25" height="25"/>
+    </resources>
 </document>
